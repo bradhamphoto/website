@@ -6,12 +6,13 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     container:
-      image: node:12-alpine
+      image: node:12-slim
     steps:
       - uses: actions/checkout@v1
       - name: deploy static site
         run: |
-          apk add --update git
+          apt-get update
+          apt-get install -y git
           yarn
           yarn deploy
         env:
