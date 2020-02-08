@@ -13,3 +13,5 @@ jobs:
       run: |
         yarn
         yarn deploy
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
