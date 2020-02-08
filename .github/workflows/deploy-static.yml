@@ -6,7 +6,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     container:
-      image: node:12-slim
+      image: node:12
     steps:
       - uses: actions/checkout@v1
       - name: deploy static site
