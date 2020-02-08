@@ -13,6 +13,8 @@ jobs:
         run: |
           apt-get update
           apt-get install -y git
+          git config --global user.email "deploy@localhost"
+          git config --global user.name "Github Actions"
           yarn
           yarn deploy
         env:
