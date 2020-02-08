@@ -1,0 +1,17 @@
+name: Deploy Static Site
+on:
+  push:
+    branches: master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    container:
+      image: node
+    steps:
+    - uses: actions/checkout@v1
+    - name: deploy static site
+      run: |
+        npm ci
+        npm run deploy
+      env:
+        GH_TOKEN: bradhamphoto:${{ secrets.GH_TOKEN }}
