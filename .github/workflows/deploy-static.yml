@@ -13,5 +13,3 @@ jobs:
       run: |
         yarn
         yarn deploy
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
