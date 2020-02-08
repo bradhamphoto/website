@@ -39,8 +39,7 @@ const Layout = props => {
               {title}
             </Link>
           </div>
-          <div className="site-head-right">
-          </div>
+          <div className="site-head-right"></div>
         </div>
       </header>
       <main id="site-main" className="site-main">
